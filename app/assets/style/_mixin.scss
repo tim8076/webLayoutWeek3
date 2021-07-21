@@ -1,0 +1,27 @@
+// 3.3 格線
+@mixin grid($width,$cloum_number,$cloum_gutter){
+    width: ($width - $cloum_gutter*($cloum_number - 1) ) / $cloum_number;
+    margin-right: $cloum_gutter;
+    &:nth-child(#{$cloum_number}n){
+      margin-right: 0
+    }  
+}
+
+// hover 線條效果
+
+@mixin hoverLine($color, $height){
+    &::before{
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      right: 50%;
+      height: $height;
+      background-color: $color;
+      transition: all .3s ease-in-out;
+    }
+    &:hover::before{
+      left: 0;
+      right: 0;
+    }
+}

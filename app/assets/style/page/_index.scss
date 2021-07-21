@@ -1,0 +1,297 @@
+
+.page-index{
+  .sub-title{
+     font-size: $font-xxlg;
+     text-align: center;
+     margin-bottom: 40px;
+     &--primaryDark{
+        color: $color-primary-dark;
+     }
+     &--white{
+        color: $color-white;
+     }
+     &--dark{
+        color: $color-dark;
+     }
+     @include pad{
+        font-size: $font-xlg;
+        margin-bottom: 32px;
+     }
+     @include phone{
+        font-size: $font-med;
+        margin-bottom: 20px;
+     }
+  }
+  .jumbotron{
+    background-image: url('../images/people/index-jumbotron.jpg');
+    height: 840px;
+    &{
+        @include phone{
+          height: 394px;
+        }
+    }
+    .container{
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+    }
+    .title{
+      color: $color-primary-dark;
+    }
+    .title h1{
+        font-size: 64px;
+        text-align: end;
+        @include pad{
+            font-size: 48px;
+        }
+        @include phone{
+            font-size: 32px;
+        }
+    }
+    .title p{
+        font-size: 36px;
+        text-align: end;
+        @include pad{
+            font-size: 20px;
+        }
+        @include phone{
+            font-size: 16px;
+        }
+    }
+  }
+  .about{
+    background-color: $color-secondary;
+    .sub-title{
+       @include phone{
+          font-size: $font-lg;
+       }
+    }
+    &__items{
+       display: flex;
+       flex-wrap: wrap;
+       justify-content: space-between;
+    }
+    &__item{
+       width: 25%;
+       @include pad {
+          width: 50%;
+          &:nth-child(1),
+          &:nth-child(2){
+              margin-bottom: 32px;
+          }
+       }
+       @include phone{
+           width: 100%;
+           &:not(:last-child){
+             margin-bottom: 32px;
+           }
+       }
+       .item{
+         width: 255px;
+          @include pad {
+            margin: 0 auto;
+          }
+       }
+       .icon{
+           padding: 8px 0;
+           margin-bottom: 16px;
+           text-align: center;
+       }
+       .icon span{
+           color: $color-primary-dark;
+       } 
+       .title{
+          text-align: center;
+          font-size: $font-lg;
+          color: $color-primary-dark;
+          margin-bottom: 8px;
+       }
+    }
+  }
+  .series{
+    &__item{
+       display: flex;
+       position: relative;
+       &:not(:last-child){
+           margin-bottom: 32px;
+       }
+       &:nth-child(2){
+          .text{
+              order: -1;
+              justify-content: flex-end;
+          }
+       }
+       @include pad {
+          &:not(:last-child){
+            margin-bottom: 8px;
+          }
+          &:nth-child(2){
+            .text{
+                order: 1;
+                justify-content: flex-start;
+                @include phone{
+                    justify-content: center;
+                }
+            }
+          }
+       }
+    }
+    &__item .img{
+       height: 320px;
+       width: 57.207%;
+       background-position: top center;
+       @include pad {
+           height: 168px;
+       }
+       @include phone{
+           width: 100%;
+       }
+    }
+    &__item .img-1{
+       background-image: url('../images/people/model-1.png')
+    }
+    &__item .img-2{
+       background-image: url('../images/people/model-2.png')
+    }
+    &__item .img-3{
+       background-image: url('../images/people/model-3.png')
+    }
+    &__item .text{
+        width: 42.792%;
+        color: $color-primary;
+        padding: 0 30px;
+        display: flex;
+        align-items: center;
+        .title{
+           font-style: italic;
+           font-size: $font-xxlg;
+           margin-left: 10px;
+           @extend %upperCase;
+           @include pad {
+               font-size: 28px;
+           }
+        }
+        @include phone{
+           position: absolute;
+           top: 0;
+           left: 0;
+           width: 100%;
+           height: 100%;
+           display: flex;
+           justify-content: center;
+        }
+    }
+  }
+  .coBranding{
+    background-image: url('../images/people/red-bg.jpg');
+    &__cards{
+       display: flex;
+       flex-wrap: wrap;
+       justify-content: space-between;
+    }
+    &__cards .card{
+       width: 47.826%;
+       height: 455px;
+       @include pad {
+           height: 278px;
+       }
+       @include phone{
+           height: 291px;
+           width: 100%;
+           &:first-child{
+               margin-bottom: 16px;
+           }
+       }
+    }
+    &__cards .card-1{
+        background-image: url('../images/people/coBrand-1.jpg');
+    }
+    &__cards .card-2{
+        background-image: url('../images/glassess/coBrand-2.jpg');
+    }
+    &__cards .card h3{
+        width: 100%;
+        height: 100%;
+        background-color: rgba(255,255,255,.5);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $color-primary;
+        font-size: 72px;
+        @include pad {
+            font-size: $font-xlg;
+        }
+    }
+  }
+  .recommend{
+    &__cards{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    &__card{
+       width: 22.972%;
+       box-shadow: 0px 2px 6px #00000029;
+       @include pad {
+           width: 47.826%;
+           &:nth-child(1),
+           &:nth-child(2){
+               margin-bottom: 32px;
+           }
+       }
+       @include phone{
+           width: 100%;
+           &:not(:last-child){
+               margin-bottom: 16px;
+           }
+       }
+    }
+    &__card img{
+        height: 256px;
+        object-fit: cover;
+        width: 100%;
+    }
+    &__card .comment{
+        min-height: 204px;
+        padding: 16px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    &__card .text{
+        color: $color-gray-300;
+        .title{
+            font-size: $font-sm;
+            margin-bottom: 8px;
+        }
+    }
+  }
+  .contact{
+      background-color: $color-secondary;
+      &__area{
+        width: 65.765%;
+        margin: 0 auto;
+        @include phone{
+            width: 100%;
+        }
+      }
+      &__info{
+        font-size: $font-med;
+        margin-bottom: 20px;
+        @include pad {
+            font-size: $font-base;
+        }
+      }
+      .btn{
+        width: 47%;
+        margin: 0 auto;
+      }
+      .form{
+          margin-bottom: 40px;
+          @include pad {
+              margin-bottom: 20px;
+          }
+      }
+  }
+}

@@ -1,0 +1,12 @@
+
+.location{
+    .form__select__row{
+        margin-bottom: 37px;
+        @include pad{
+            margin-bottom: 24px;
+        }
+        @include phone{
+            margin-bottom: 20px;
+        }
+    }
+}

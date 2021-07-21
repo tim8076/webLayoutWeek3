@@ -1,0 +1,167 @@
+//表頭
+.header{
+  background-color: $color-primary;
+  padding: 0 88px; 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @include pad {  
+    padding: 0px 38px; 
+  }
+  @include phone {  
+    flex-direction: column;
+    align-items: stretch;
+    padding: 0;
+  }
+
+  &__logo{
+    display: block;
+    @include phone {  
+      &{
+        padding: 10px 0;
+        text-align: center;
+      }
+    }
+  }
+  &__logo img{
+    width: 80px;
+    height: 48px;
+    @include phone{
+        width: 48px;
+        height: 30px;
+    }
+  }
+  &__links{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__links li{
+    @include phone{
+      width: 50%;
+    }
+  }
+  &__links .link{
+    font-size: $font-med;
+    color: $color-white;
+    display: block;
+    margin-left: 64px;
+    padding-top: 38px;
+    padding-bottom: 41px;
+    position: relative;
+    @include pad {
+      margin-left: 40px;
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
+    @include phone {
+      padding: 8px 0;
+      margin: 0;
+      text-align: center;
+      border: 1px solid $color-white;
+    }
+    @include hoverLine($color-white, 8px);
+  }
+}
+//表尾
+.footer{
+   background-color: $color-primary;
+   padding: 32px 39px;
+   position: relative;
+   @include phone{
+       padding: 24px 15px;
+   }
+   &__contact{
+       padding-bottom: 24px;
+       border-bottom: 1px solid $color-white;
+       margin-bottom: 33px;
+       @include pad {
+           margin-bottom: 16px;
+       }
+    }
+   &__contact .contacts{
+        display: flex;
+        justify-content: space-between;
+        .list{
+            display: flex;
+            margin-bottom: 36px;
+            @include phone{
+                display: none;
+            }
+        }
+        .list__item a{
+            display: block;
+            margin-right: 48px;
+            color: $color-white;
+            position: relative;
+            &:hover{
+              color: rgb(255, 199, 136);
+            }
+        }
+   }
+   &__contact .socialsIcons{
+       display: flex;
+       .icon{
+           display: block;
+           margin-left: 32px;
+           width: 48px;
+           height: 48px;
+           @include pad {
+              margin-left: 24px;
+              width: 24px;
+              height: 24px; 
+           }
+       }
+       @include phone{
+           position: absolute;
+           top: 24px;
+           right: 15px;
+       }
+   }
+   &__contact .infos{
+       .info{
+           display: block;
+           color:$color-white;
+           font-size: 36px;
+           @include pad{
+               font-size: 20px;
+           }
+       }
+       .material-icons-outlined.md-40{
+           font-size: 40px;
+           margin-right: 20px;
+           @include pad {
+             font-size: 20px;
+             margin-right: 10px;
+           }
+       }
+   }
+   &__copyRight{
+       color: $color-white;
+       display: flex;
+       justify-content: space-between;
+       @include phone{
+           flex-direction: column;
+           font-size: 14px;
+       }
+       .copyRight{
+          @include phone{
+              margin-bottom: 8px;
+          } 
+       }
+       .policy{
+           display: flex;
+           &__text{
+                color: $color-white;
+                margin-left: 48px;
+                display: block;
+                @include phone{
+                    margin-left: 0px; 
+                    margin-bottom: 8px; 
+                }
+           }
+            @include phone{
+                flex-direction: column;  
+            }
+       }
+   }
+}

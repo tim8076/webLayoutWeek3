@@ -1,0 +1,223 @@
+
+.page-article{
+   .nav{
+       &__list{
+           @include phone{
+              justify-content: space-between;
+           }
+       }
+   }
+   .breadcrumb{
+       display: flex;
+       margin: 8px 0;
+        &__item{
+            margin-right: 1em;
+            position: relative;
+            @include pad{
+                font-size: $font-sm;
+            }
+        }
+        &__item + .breadcrumb__item::before{
+            content: "/";
+            position: absolute;
+            top: 0;
+            left: -10px;
+        }
+        &__link{
+            display: block;
+            position: relative;
+        }
+        &__link--red{
+            color: $color-primary;
+        }
+   }
+   .tags{
+       font-size: $font-lg;
+       font-weight: $fw-bold;
+       &__title{
+           color: $color-primary;;
+           font-size: 28px;
+           display: flex;
+           align-items: center;
+           .material-icons-outlined{
+               margin-right: 12px;
+               font-size: 38px;
+               @include pad{
+                   margin-right: 0;
+                   font-size: 20px;
+               }
+           }
+           @include pad{
+              font-size: $font-med;
+           }
+           @include phone{
+              font-size: $font-med; 
+           }
+       }
+       &__list{
+           display: flex;
+           flex-wrap: wrap;
+       }
+       &__link{
+           color: $color-primary;
+           display: block;
+           margin-right: 16px;
+           @include pad{
+               font-size: $font-base;
+               margin-right: 8px;
+           }
+           @include phone{
+               font-size: $font-sm;
+               margin-right: 4px;
+           }
+       }
+   }
+   .main{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+   }
+   .main .tags{
+       width: 22.927%;
+       @include pad {
+           width: 21.739%;
+       }
+       @include phone {
+           width: 100%;
+       }
+   }
+   .article{
+       width: 74.324%;
+       @include pad {
+           width: 73.913%;
+       }
+       @include phone {
+           width: 100%;
+       }
+      &__title{
+         font-size: $font-xxlg;
+         margin-bottom: 8px;
+         @include pad {
+            font-size: $font-xlg;
+            margin-bottom: 4px;
+         }
+         @include phone {
+             font-size: $font-med;
+             color: $color-primary-dark;
+             margin-bottom: 0;
+         }
+      }
+      &__sub-title{
+        font-size: 1.75rem;
+        margin-bottom: 24px;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        @include pad {
+            font-size: $font-base;
+        }
+        @include phone {
+            font-size: $font-sm;
+            margin-bottom: 20px;
+        }
+      }
+      &__date{
+        font-size: $font-base;
+        color: #6C6C6C;
+        @include pad {
+            font-size: $font-sm;
+        }
+      }
+      &__image{
+          width: 100%;
+          margin-bottom: 24px;
+         @include pad {
+            height: 292px;
+            margin-bottom: 16px;
+         }
+         @include phone{
+            height: 225px;
+         }
+      }
+      &__text{
+          font-size: $font-med;
+          margin-bottom: 40px;
+          @include pad {
+              font-size: $font-base;
+              margin-bottom: 24px;
+          }
+      }
+      &__share{
+        display: flex;
+        .title{
+          font-size: $font-med;
+          margin-right: 20px;
+          @include pad{
+              font-size: $font-base;
+          }
+        }
+        .icons{
+            display: flex;
+        }
+        .icon{
+            margin-right: 16px;
+        }
+        .icon img{
+           width: 24px;
+           height: 24px;
+           @include pad {
+               width: 20px;
+               height: 20px;
+           }
+        }
+      }
+      &__links{
+         padding-top: 22px;
+         margin-top: 22px;
+         border-top: 1px solid #000;
+         display: flex;
+         justify-content: space-between;
+         @include pad {
+             margin-right: -35.086%;
+             padding-top: 18px;
+             margin-top: 18px;
+         }
+         @include phone{
+             margin-right: 0%;
+             flex-direction: column;
+             padding-top: 13px;
+             margin-top: 13px;
+             margin-bottom: 30px;
+         }
+         .item:nth-child(1) .icon{
+             margin-right: 12px;
+             @include phone {
+                 margin-right: 4px;
+             }
+         }
+         .item:nth-child(2) .icon{
+             margin-left: 12px;
+             @include phone{
+                 order: -1;
+                 margin-left: 0;
+                 margin-right: 4px;
+             }
+         }
+         .link{
+           display: flex;
+           align-items: center;
+           font-size: $font-med;
+           @include pad {
+               font-size: $font-base;
+           }
+           @include phone {
+               font-size: $font-sm;
+           }
+            .icon{
+              font-size: $font-base;
+            }
+
+         }
+      }
+   }
+}
